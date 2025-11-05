@@ -15,4 +15,3 @@ export const initialRoles: BaseItem[] = [
   { id: 'role_ath', name: 'Athlete' },
   { id: 'role_det', name: 'Detective' },
   { id: 'role_par', name: 'Parent' },
-];

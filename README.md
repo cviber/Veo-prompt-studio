@@ -4,8 +4,6 @@ A user-friendly web application for building complex, structured JSON prompts fo
 
 Visually construct detailed scenes, define cinematography, develop consistent characters, sequence actions, and manage audio cues using a comprehensive and customizable database.
 
-<!-- ![App Screenshot](path/to/screenshot.png) -->
-
 ## Key Features
 
 -   **Visual Prompt Building:** A user-friendly, form-based interface to build prompts instead of writing raw JSON by hand.
@@ -19,45 +17,15 @@ Visually construct detailed scenes, define cinematography, develop consistent ch
 
 ## Getting Started
 
-You can get the Veo Prompt Studio running on your local machine in two ways: using Docker (recommended for a clean, stable deployment) or by running the source code directly for development.
+This method is ideal if you want to run or modify the source code. It uses Vite to run a local development server with hot-reloading, which automatically updates the app in your browser when you save a file.
 
 ### Prerequisites
 
--   **Node.js:** (For local development only) Version 18.x or later.
--   **Docker:** (For Docker deployment only) [Install Docker Desktop](https://www.docker.com/products/docker-desktop/).
+-   **Node.js:** Version 18.x or later installed on your machine.
 
 ---
 
-### Option 1: Running with Docker (Recommended)
-
-This method builds a production-ready, static version of the application and serves it using a lightweight Nginx web server inside a Docker container.
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/cviber/veo-prompt-studio.git
-    cd veo-prompt-studio
-    ```
-
-2.  **Build the Docker image:**
-    This command tells Docker to build an image from the `Dockerfile` in the current directory. We'll tag it as `veo-prompt-studio`.
-    ```bash
-    docker build -t veo-prompt-studio .
-    ```
-
-3.  **Run the Docker container:**
-    This command starts a container from the image we just built. It maps port `8080` on your local machine to port `80` inside the container (where Nginx is listening).
-    ```bash
-    docker run -p 8080:80 veo-prompt-studio
-    ```
-
-4.  **Access the application:**
-    Open your web browser and navigate to: **[http://localhost:8080](http://localhost:8080)**
-
----
-
-### Option 2: Running for Local Development (Without Docker)
-
-This method is ideal if you want to modify the source code. It uses Vite to run a local development server with hot-reloading, which automatically updates the app in your browser when you save a file.
+### Installation and Running
 
 1.  **Clone the repository:**
     ```bash
@@ -109,9 +77,6 @@ The project is a standard Vite + React application with a clear directory struct
 
 ```
 /
-├── nginx/
-│   └── default.conf      # Nginx configuration for the Docker container
-├── public/               # Static assets (not currently used)
 ├── src/
 │   ├── components/       # Reusable React components (e.g., icons)
 │   ├── data/             # The core database files for all prompt options
@@ -120,18 +85,7 @@ The project is a standard Vite + React application with a clear directory struct
 │   ├── index.css         # Tailwind CSS entry point
 │   ├── index.tsx         # Main React entry point
 │   └── types.ts          # TypeScript type definitions
-├── .dockerignore         # Files to exclude from the Docker build
-├── Dockerfile            # Instructions for building the Docker image
 ├── index.html            # The main HTML file
 ├── package.json          # Project dependencies and scripts
-├── tailwind.config.js    # Tailwind CSS configuration
-└── tsconfig.json         # TypeScript configuration
+└── ... (config files)
 ```
-
-## Contributing
-
-Contributions are welcome! If you have ideas for new features, find a bug, or want to improve the database, please feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
