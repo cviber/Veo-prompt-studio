@@ -1640,6 +1640,7 @@ const DatabaseEditor: React.FC<{ db: any }> = ({ db }) => {
     const handleAdd = (newName: string) => {
         if (!newName.trim()) {
             setIsAdding(false);
+            setEditingValue('');
             return;
         }
         const newItem: BaseItem | CascadingOption = {
@@ -1649,6 +1650,7 @@ const DatabaseEditor: React.FC<{ db: any }> = ({ db }) => {
         };
         db.setData([...db.data, newItem]);
         setIsAdding(false);
+        setEditingValue('');
     };
 
     const handleDelete = (id: string) => {
