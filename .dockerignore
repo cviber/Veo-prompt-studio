@@ -12,7 +12,7 @@ Dockerfile
 .dockerignore
 
 # Nginx config (this is only needed by the server stage)
-nginx
+# nginx
 
 # IDE / OS files
 .vscode
@@ -27,3 +27,4 @@ yarn-debug.log*
 .env.local
 .env.development
 .env.production
+
