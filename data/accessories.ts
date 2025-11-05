@@ -1,0 +1,28 @@
+import { BaseItem } from '../types';
+
+export const initialAccessories: BaseItem[] = [
+  { id: 'acc_glasses', name: 'Glasses' },
+  { id: 'acc_sunglasses', name: 'Sunglasses' },
+  { id: 'acc_watch', name: 'Watch' },
+  { id: 'acc_necklace', name: 'Necklace' },
+  { id: 'acc_locket', name: 'Locket' },
+  { id: 'acc_bracelet', name: 'Bracelet' },
+  { id: 'acc_earrings', name: 'Earrings' },
+  { id: 'acc_ring', name: 'Ring' },
+  { id: 'acc_scarf', name: 'Scarf' },
+  { id: 'acc_hat', name: 'Hat' },
+  { id: 'acc_cap', name: 'Cap' },
+  { id: 'acc_beanie', name: 'Beanie' },
+  { id: 'acc_gloves', name: 'Gloves' },
+  { id: 'acc_belt', name: 'Belt' },
+  { id: 'acc_duty_belt', name: 'Duty Belt' },
+  { id: 'acc_holster', name: 'Holster' },
+  { id: 'acc_purse', name: 'Purse' },
+  { id: 'acc_backpack', name: 'Backpack' },
+  { id: 'acc_briefcase', name: 'Briefcase' },
+  { id: 'acc_satchel', name: 'Satchel' },
+  { id: 'acc_cane', name: 'Cane' },
+  { id: 'acc_pipe', name: 'Pipe' },
+  { id: 'acc_headphones', name: 'Headphones' },
+  { id: 'acc_piercings', name: 'Piercings' },
+];

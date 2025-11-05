@@ -1,0 +1,25 @@
+import { BaseItem } from '../types';
+
+export const initialPersonalityIndicators: BaseItem[] = [
+  { id: 'pi_trait_confident', name: 'Confident' },
+  { id: 'pi_trait_shy', name: 'Shy' },
+  { id: 'pi_trait_introverted', name: 'Introverted' },
+  { id: 'pi_trait_extroverted', name: 'Extroverted' },
+  { id: 'pi_trait_approachable', name: 'Approachable' },
+  { id: 'pi_trait_intimidating', name: 'Intimidating' },
+  { id: 'pi_trait_kind', name: 'Kind' },
+  { id: 'pi_trait_cruel', name: 'Cruel' },
+  { id: 'pi_trait_honest', name: 'Honest' },
+  { id: 'pi_trait_deceptive', name: 'Deceptive' },
+  { id: 'pi_trait_brave', name: 'Brave' },
+  { id: 'pi_trait_cowardly', name: 'Cowardly' },
+  { id: 'pi_trait_humble', name: 'Humble' },
+  { id: 'pi_trait_arrogant', name: 'Arrogant' },
+  { id: 'pi_trait_witty', name: 'Witty' },
+  { id: 'pi_trait_serious', name: 'Serious' },
+  { id: 'pi_trait_playful', name: 'Playful' },
+  { id: 'pi_trait_patient', name: 'Patient' },
+  { id: 'pi_trait_impulsive', name: 'Impulsive' },
+  { id: 'pi_trait_resourceful', name: 'Resourceful' },
+  { id: 'pi_rel_bonded_with_partner', name: 'Deeply bonded with partner' },
+];

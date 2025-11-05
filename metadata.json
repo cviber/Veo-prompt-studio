@@ -1,0 +1,5 @@
+{
+  "name": "Veo 3 JSON Prompt Studio",
+  "description": "A user-friendly, single-page web application designed to be a JSON Prompt Generator for AI video platforms. Build complex, high-quality JSON prompts by selecting pre-filled options from a wide, manageable database.",
+  "requestFramePermissions": []
+}
