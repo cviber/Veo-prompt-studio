@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+build
+
+# Git & Docker
+.git
+.gitignore
+Dockerfile
+.dockerignore
+
+# Nginx config (this is only needed by the server stage)
+nginx
+
+# IDE / OS files
+.vscode
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# Environment variables (DO NOT COMMIT THESE)
+.env
+.env.local
+.env.development
+.env.production
