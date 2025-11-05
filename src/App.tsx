@@ -586,30 +586,38 @@ export default function App() {
             char.path.forEach(id => {
                 const option = getOption(id, charactersData);
                 if (option?.jsonBlock) {
-                    try { animalDetailsJson = { ...animalDetailsJson, ...JSON.parse(option.jsonBlock) }; } 
-                    catch (e) {}
+                    try { 
+                        animalDetailsJson = { ...animalDetailsJson, ...JSON.parse(option.jsonBlock) }; 
+                    } catch (e) {
+                        console.error(`Failed to parse jsonBlock for character option ${option.id}:`, e);
+                    }
                 }
             });
 
-            // Merge all details from the hierarchical selection's jsonBlock.
-            // This will include properties like "breed".
+            // Start with the details from the hierarchy's jsonBlock.
+            // This will include properties like "breed" from level 4.
             Object.assign(details, animalDetailsJson);
 
-            // Set/override species, falling back to the last selected item's name if not in jsonBlock.
+            // Set a fallback for species based on the selected path name.
             details.species = animalDetailsJson.species || getOption(char.path[char.path.length - 1], charactersData)?.name;
 
-            // Add/overwrite details from specific dropdowns. Use undefined for empty values so they can be cleaned up.
-            details.age = findName(char.animalAgeId, animalAges) || undefined;
-            details.size = findName(char.animalSizeId, animalSizes) || undefined;
-            
-            const selectedColorName = findName(char.animalColorId, animalColors);
-            if (selectedColorName) {
-                details.color = selectedColorName;
-            } else if (!details.color) { // only set to undefined if not present in jsonblock
-                details.color = undefined;
+            // Now, ONLY override with UI selections if they have been made.
+            const selectedAge = findName(char.animalAgeId, animalAges);
+            if (selectedAge) {
+                details.age = selectedAge;
+            }
+
+            const selectedSize = findName(char.animalSizeId, animalSizes);
+            if (selectedSize) {
+                details.size = selectedSize;
             }
             
-            // Clean up any undefined properties from the details object.
+            const selectedColor = findName(char.animalColorId, animalColors);
+            if (selectedColor) {
+                details.color = selectedColor;
+            }
+            
+            // Clean up any properties that are still undefined.
             Object.keys(details).forEach(key => {
               if (details[key as keyof typeof details] === undefined) {
                 delete details[key as keyof typeof details];

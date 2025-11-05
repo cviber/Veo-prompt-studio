@@ -34,7 +34,7 @@ This method builds a production-ready, static version of the application and ser
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/veo-prompt-studio.git
+    git clone https://github.com/cviber/veo-prompt-studio.git
     cd veo-prompt-studio
     ```
 
@@ -61,7 +61,7 @@ This method is ideal if you want to modify the source code. It uses Vite to run 
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/veo-prompt-studio.git
+    git clone https://github.com/cviber/veo-prompt-studio.git
     cd veo-prompt-studio
     ```
 
